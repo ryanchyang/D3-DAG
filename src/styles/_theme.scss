@@ -1,0 +1,150 @@
+:root {
+  --primary-color: #0071f5;
+  --text-color: #fff;
+}
+
+$primary-color: var(--primary-color);
+$primary-color-d: var(--primary-color-dark);
+// $primary-color-l: var(--primary-color-light);
+$secondary-color: var(--secondary-color);
+$black-color: var(--black-color);
+
+// primary 一對多
+$primary-light: var(--primary-light);
+$primary-deep: var(--primary-deep);  
+$primary-dark: var(--primary-dark);
+
+// 背景
+$bg-secondary-primary: var(--bg-secondary-primary);
+$bg-secondary-deep: var(--bg-secondary-deep);
+$bg-secondary-dark: var(--bg-secondary-dark);
+$bg-primaryLight-deep: var(--bg-primaryLight-deep);
+$bg-primaryLight-deep-trans: var(--bg-primaryLight-deep-trans);
+
+// 文字
+$f-placeholder: var(--f-placeholder);
+$f-deep-light: var(--f-deep-light);
+$f-deep-dark: var(--f-deep-dark);
+$f-secondary-primary: var(--f-secondary-primary);
+$f-secondary-dark: var(--f-secondary-dark);
+$f-black-secondary: var(--f-black-secondary);
+$f-black-primary: var(--f-black-primary);
+$f-primary-secondary: var(--f-primary-secondary);
+
+$primary-color-h: var(--primary-color-hover);
+$primary-color-d-h: var(--primary-color-dark-hover);
+$primary-color-l-h: var(--primary-color-light-hover);
+
+$primary-shadow-d: var(--primary-shadow-d);
+
+$primary-font-color: var(--primary-font-color);
+$secondary-font-color: var(--secondary-font-color);
+
+$page-disabled-color: var(--page-disabled-color);
+
+$background-color: var(--background-color);
+$border-input: var(--border-input);
+// $absolute-white: #fff;
+// $absolute-dark: #00103B;
+
+/* Highlights */
+$safe: rgba(0, 186, 52);
+$safe-bg: rgba(0, 186, 52, 0.6);
+$safe-border: #00BA34;
+$concern: rgba(255, 215, 2);
+$concern-bg: rgba(255, 215, 2, 0.6);
+$concern-border: #FFD702;
+$warning: rgba(255, 127, 10);
+$warning-bg: rgba(255, 127, 10, 0.6);
+$warning-border: #FF7F0A;
+$danger: rgba(255, 48, 48);
+$danger-bg: rgba(255, 48, 48, 0.6);
+$danger-border: #FF3030;
+
+
+body {
+  transition: --background-color 0.5s;
+}
+
+body[data-theme="light"] {
+  // 不變色
+  --primary-color: #0071F5;
+  --primary-color-dark: #0B2B7F;
+  // --primary-color-light: #D7E8FE;
+  --secondary-color: #fff;
+  --black-color: #000;
+
+  // primary 一對多
+  --primary-light: #0071F5;
+  --primary-deep: #0071F5;  
+  --primary-dark: #0071F5;
+
+  // 背景
+  --bg-secondary-primary: #fff;
+  --bg-secondary-deep: #fff;
+  --bg-secondary-dark: #fff;
+  --bg-primaryLight-deep: #C8E1FF;
+  --bg-primaryLight-deep-trans: rgba(168, 208, 255, 0.5);
+
+  // 文字
+  --f-placeholder: #CCCCCC;
+  --f-deep-light: #0B2B7F;
+  --f-deep-dark: #0B2B7F;
+  --f-secondary-primary: #fff;
+  --f-secondary-dark: #fff;
+  --f-black-secondary: #000;
+  --f-black-primary: #000;
+  --f-primary-secondary: #0071F5;
+
+  // 其他
+  --primary-color-hover: #005AC4;
+  --primary-color-dark-hover: #005AC4;
+  --primary-color-light-hover: #E6F1FE;
+  --primary-shadow-d: #0029FF;
+  --primary-font-color: #000;
+  --secondary-font-color: #909090;
+  --page-disabled-color: #CCCCCC;
+  --background-color: #fff;
+  --border-input: #0071F5;
+}
+body[data-theme='dark'] {
+  // 不變色
+  --primary-color: #0071F5;
+  --primary-color-dark: #0B2B7F;
+  // --primary-color-light: rgba(0, 113, 245);
+  --secondary-color: #fff;
+  --black-color: #000;
+
+ // primary 一對多
+  --primary-light: #fff;
+  --primary-deep: #0B2B7F;
+  --primary-dark: #00103C;
+
+  // 背景
+  --bg-secondary-primary: #0071F5;
+  --bg-secondary-deep: #0B2B7F;
+  --bg-secondary-dark: #232251;
+  --bg-primaryLight-deep: #0058C7;
+  --bg-primaryLight-deep-trans: rgba(0, 113, 245, 0.7);
+
+  // 文字
+  --f-placeholder: #CCCCCC;
+  --f-deep-light: #fff;
+  --f-deep-dark: #00103C;
+  --f-secondary-primary: #0071F5;
+  --f-secondary-dark: #00103C;
+  --f-black-secondary: #fff;
+  --f-black-primary: #0071F5;
+  --f-primary-secondary: #fff;
+
+
+  --primary-color-hover: #E5F1FE;
+  --primary-color-dark-hover: #546AA5;
+  --primary-color-light-hover: #546AA5;
+  --primary-shadow-d: #0029FF;
+  --primary-font-color: #fff;
+  --secondary-font-color: #909090;
+  --page-disabled-color: #CCCCCC;
+  --background-color: #00103B;
+  --border-input: transparent;
+}

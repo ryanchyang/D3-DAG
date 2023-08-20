@@ -1,0 +1,195 @@
+@import '../config';
+
+.tracking-warning {
+  display: block;
+  @include lg {
+    display: none;
+  }
+}
+
+.tracking {
+  display: none;
+  width: 1290px; // 測試
+  margin: 0 auto;
+  margin-top: space('huge');
+  @include lg {
+    display: block;
+  }
+
+  .btn-return {
+    width: fit-content;
+    color: $primary-color;
+    margin-bottom: space('micro');
+    cursor: pointer;
+  }
+  .pointer {
+    cursor: pointer;
+  }
+  .graph-loading {
+    position: absolute;
+
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .search-area {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 16px;
+    padding: 15px 40px;
+    .bg {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .bg-blur {
+      position: absolute;
+      z-index: -3;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $bg-primaryLight-deep;
+      filter: blur(15px);
+    }
+    .control-bar {
+      position: relative;
+      z-index: 5;
+      padding: space('big') space('big') space('big') space('big');
+      .back-icon {
+        @include mainFont-B(40);
+        color: $primary-color;
+      }
+      .address-search-input {
+        width: 394px;
+        height: 40px;
+        background-color: transparent;
+        border: 2px solid $primary-deep;
+        input {
+          &::placeholder {
+            color: $f-primary-secondary;
+          }
+        }
+      }
+      .date-time-picker-area {
+        color: $f-deep-light;
+        .picker-block {
+          display: flex;
+          align-items: center;
+          margin-right: space('huge');
+          .picker {
+            background-color: $primary-light;
+            input {
+              @include mainFont-B(25);
+              color: $f-secondary-primary;
+              &::placeholder {
+                color: $f-secondary-primary;
+              }
+            }
+            .anticon-calendar {
+              color: white;
+            }
+          }
+        }
+      }
+      .info-icon {
+        @include mainFont-B(40);
+        color: $primary-light;
+      }
+    }
+  }
+  .graph-area {
+    position: relative;
+    padding: space('small');
+    margin-bottom: space('big');
+    height: 630px;
+    overflow: hidden;
+    //   background-color: $primary-color-l;
+    .graph {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .bg {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .bg-blur {
+      position: absolute;
+      z-index: -3;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $bg-primaryLight-deep;
+      filter: blur(15px);
+    }
+    .mark {
+      &-danger {
+        rect {
+          fill: $danger;
+        }
+      }
+      &-warning {
+        rect {
+          fill: $warning;
+        }
+      }
+      &-caution {
+        rect {
+          fill: $concern;
+        }
+      }
+      &-safe {
+        rect {
+          fill: $safe;
+        }
+      }
+    }
+    .node-rect {
+      fill: $bg-secondary-deep;
+    }
+    .node-address {
+      @include mainFont-B(30);
+      fill: $f-primary-secondary;
+    }
+    .node-copy {
+      fill: $f-primary-secondary;
+    }
+    .visx-link {
+      stroke: $primary-light;
+    }
+    .marker {
+      fill: $primary-light;
+    }
+  }
+}
+// override antd
+.ant-popover {
+  .ant-popover-inner {
+    max-width: 481px;
+    background-color: $primary-light;
+    @include mainFont(25);
+    &-content {
+      color: $f-secondary-dark;
+    }
+  }
+  .ant-popover-arrow {
+    &::after {
+      background: $primary-light;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+$spacing: (
+    default: 16px,
+    start: 120px,
+    ending: 120px,
+    section: 60px,
+    huge: 32px,
+    big: 24px,
+    small: 12px,
+    micro: 8px,
+    hint: 6px,
+    zero: 0px
+);
+
+$border: (
+    default: 16px,
+    huge: 90px,
+    large: 20px,
+    big: 18px,
+    small: 12px,
+    micro: 8px,
+    hint: 6px,
+    zero: 0px
+);
+
+@each $item, $dist in $spacing {
+    .mg-#{$item}{
+        margin: $dist;
+    }
+    .mt-#{$item}{
+        margin-top: $dist;
+    }
+    .mb-#{$item}{
+        margin-bottom: $dist;
+    }
+    .mr-#{$item}{
+        margin-right: $dist;
+    }
+    .ml-#{$item}{
+        margin-left: $dist;
+    }
+    .pd-#{$item}{
+        padding: $dist;
+    }
+    .pr-#{$item}{
+        padding-right: $dist;
+    }
+    .pl-#{$item}{
+        padding-left: $dist;
+    }
+    .pb-#{$item}{
+        padding-bottom: $dist;
+    }
+    .pt-#{$item}{
+        padding-top: $dist;
+    }
+}
+
+@function space($type: default) {
+    @return map-get($spacing, $type);
+}
+
+@function border($type: default) {
+    @return map-get($border, $type);
+}

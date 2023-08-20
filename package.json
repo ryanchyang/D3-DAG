@@ -1,0 +1,44 @@
+{
+  "name": "whospay_next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build--beforeOnline": "APP_ENV=beforeOnline next build",
+    "build--whospay": "APP_ENV=whospay next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.8.0",
+    "@next/font": "13.0.7",
+    "@visx/drag": "^2.17.0",
+    "@visx/event": "2.1.2",
+    "@visx/gradient": "latest",
+    "@visx/group": "latest",
+    "@visx/hierarchy": "latest",
+    "@visx/responsive": "latest",
+    "@visx/shape": "latest",
+    "@visx/zoom": "2.2.2",
+    "antd": "^5.0.7",
+    "axios": "^1.2.1",
+    "d3": "7.1.1",
+    "d3-dag": "0.8.2",
+    "dagre-d3-react": "^0.2.4",
+    "eslint": "8.30.0",
+    "eslint-config-next": "13.0.7",
+    "i18next": "^22.4.5",
+    "moment": "^2.29.4",
+    "next": "13.0.7",
+    "nodejs-jsencrypt": "^3.0.0-rc.1",
+    "react": "18.2.0",
+    "react-d3-graph": "^2.6.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.45.4"
+  },
+  "devDependencies": {
+    "react-i18next": "^12.1.1",
+    "sass": "^1.57.0"
+  }
+}

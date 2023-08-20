@@ -1,0 +1,152 @@
+// * {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
+// body,
+// html {
+//   // height: 100%;
+// }
+// html,
+// body,
+// div,
+// span,
+// img,
+// ol,
+// ul,
+// li,
+// a,
+// p,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// option,
+// legend,
+// label,
+// table,
+// th,
+// td,
+// tr,
+// article,
+// aside,
+// caption,
+// figure,
+// footer,
+// header,
+// hgroup,
+// mark,
+// nav,
+// section,
+// time,
+// audio,
+// video {
+//   margin: 0;
+//   padding: 0;
+//   border: 0;
+//   outline: 0;
+// }
+// img {
+//   max-width: 100%;
+// }
+// a {
+//   &:hover,
+//   &:focus,
+//   &:active {
+//     text-decoration: none;
+//     outline: none !important;
+//     border: 0;
+//   }
+// }
+// input:focus {
+//   outline: none;
+// }
+// input::-moz-focus-inner {
+//   border: 0;
+//   display: none;
+// }
+// input::-webkit-focus-inner {
+//   border: 0;
+//   display: none;
+// }
+
+// input:-webkit-autofill,
+// input:-webkit-autofill:hover,
+// input:-webkit-autofill:focus {
+//   box-shadow: 0 0 0px 1000px rgba(119, 255, 210, 0.788) inset !important;
+//   -webkit-box-shadow: 0 0 0px 1000px rgba(119, 255, 210, 0.788) inset !important;
+// }
+
+// input:focus,
+// textarea:focus,
+// select:focus {
+//   outline: none;
+// }
+// ::placeholder {
+//   color: #666;
+//   opacity: 1; /* Firefox */
+// }
+// :-ms-input-placeholder {
+//   /* Internet Explorer 10-11 */
+//   color: #666;
+// }
+// ::-ms-input-placeholder {
+//   /* Microsoft Edge */
+//   color: #666;
+// }
+// table {
+//   border-collapse: collapse;
+// }
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+// ul,
+// li {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// figure {
+//   margin: 0px;
+// }
+
+// form {
+//   position: relative;
+// }
+// hr {
+//   margin: 0;
+//   padding: 0;
+//   border-color: #000;
+// }
+
+// ul {
+//   list-style-type: none;
+// }
+
+// li {
+//   list-style: none;
+//   position: relative;
+// }
+// a,
+// button {
+//   position: relative;
+
+//   &:hover,
+//   &:focus {
+//     outline: 0;
+//     text-decoration: none;
+//   }
+// }
+// input,
+// textarea,
+// button {
+//   border: 0px;
+// }

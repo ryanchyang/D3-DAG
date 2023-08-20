@@ -1,0 +1,303 @@
+@import './config';
+
+// ---------- 按鈕 開始 ----------
+.ant-btn-default {
+  // type='defalut'
+  background: $primary-color-d;
+  border-color: $primary-color-d;
+  box-shadow: none;
+  color: $secondary-color;
+  @include mainFont-B(15);
+  &:not(:disabled) {
+    &:hover {
+      background-color: $primary-color-d-h;
+      color: $secondary-color;
+      border-color: $primary-color-d-h;
+    }
+  }
+}
+.ant-btn-default[ant-click-animating-without-extra-node='true']::after {
+  --antd-wave-shadow-color: transparent;
+}
+.ant-btn-primary {
+  // type='primary'
+  background-color: $primary-color;
+  border-color: $primary-color;
+  box-shadow: none;
+  color: $secondary-color;
+  @include mainFont-B(15);
+  &:not(:disabled) {
+    &:hover {
+      background-color: $primary-color-h;
+      color: $secondary-color;
+      border-color: $primary-color-h;
+    }
+  }
+}
+.ant-btn-primary[ant-click-animating-without-extra-node='true']::after {
+  --antd-wave-shadow-color: transparent;
+}
+.ant-btn-dashed {
+  // type='dashed'
+  background: $secondary-color;
+  border-color: #a8d0ff66;
+  border-style: solid;
+  box-shadow: none;
+  color: $primary-color;
+  @include mainFont-B(15);
+  &:not(:disabled) {
+    &:hover {
+      background-color: $primary-color-h;
+      color: $secondary-color;
+      border-color: $primary-color-h;
+    }
+  }
+}
+.ant-btn-default[ant-click-animating-without-extra-node='true']::after {
+  --antd-wave-shadow-color: transparent;
+}
+// ---------- 按鈕 結束 ----------
+// ---------- Form Input 開始 ----------
+.ant-form-item {
+  // margin-bottom: 25px;
+}
+// ---------- Form Input 結束 ----------
+// ---------- Input系列 開始 ----------
+.ant-input-affix-wrapper {
+  // 一般的input
+  padding: 0 15px;
+  border-radius: 50px;
+  border: 1px solid $primary-color;
+  &:hover {
+    box-shadow: 0px 0px 5px 0px #0071f5;
+  }
+  &.ant-input-affix-wrapper-focused {
+    box-shadow: 0px 0px 5px 0px #0071f5;
+  }
+  &.ant-input-affix-wrapper-status-error {
+    box-shadow: 0px 0px 5px 0px #ff3030;
+  }
+  .ant-input {
+    background-color: transparent;
+    font-size: 16px;
+    color: $f-deep-light;
+    font-size: 16px;
+    font-family: 'NotoSans-Regular', 'NotoSansSC-Regular';
+    &:hover {
+      box-shadow: none;
+    }
+    &.ant-input-status-error {
+      box-shadow: 0px 0px 5px 0px #ff3030;
+    }
+    &::placeholder {
+      color: $f-placeholder;
+    }
+  }
+  .ant-input-prefix {
+    font-size: 16px;
+    color: $primary-color;
+    margin-inline-end: 15px;
+  }
+}
+.ant-input {
+  background-color: white;
+  border: none;
+  // padding: space('small');
+  height: 40px;
+  border-radius: 12px;
+  @include mainFont-B(18); // border:
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
+}
+// ---------- Input系列 結束 ----------
+// ---------- Layout 開始 ----------
+.ant-layout {
+  background: $background-color;
+  .ant-layout-content {
+    min-height: 100vh;
+    // min-height: calc(100vh - 80px);
+    @include md {
+      // min-height: calc(100vh - 100px);
+    }
+  }
+}
+// ---------- Layout 結束 ----------
+// ---------- Select 開始 ----------
+.ant-select {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
+  color: $f-black-secondary;
+  .ant-select-selection-item {
+    // 被選取項目
+    color: $f-black-secondary;
+    @include mainFont-B(15);
+  }
+  .ant-select-selector {
+    // input框部分
+    border-radius: border('small');
+    background-color: $bg-secondary-deep !important;
+    color: $f-black-secondary;
+    .ant-select-selection-placeholder {
+      color: $f-placeholder;
+      @include mainFont(20);
+    }
+    .ant-select-selection-search-input {
+      &::placeholder {
+        color: #909090;
+        @include mainFont(20);
+      }
+    }
+  }
+  .ant-select-arrow {
+    // V 部分
+    color: $primary-light;
+    font-size: 15px;
+    font-weight: 900;
+    &:hover {
+      background-color: $bg-secondary-deep !important;
+    }
+  }
+  .ant-select-clear {
+    // 清除內容icon
+    background: $bg-secondary-deep;
+    color: $primary-light;
+    &:hover {
+      color: $primary-light;
+    }
+  }
+}
+.ant-select-single.ant-select-open {
+  // 上一個被選取的item(input框)
+  .ant-select-selection-item {
+    color: $f-black-secondary;
+    @include mainFont-B(15);
+  }
+}
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border: none;
+  border-radius: border('small');
+  // padding: 4px 11px;
+  min-height: 40px;
+}
+.ant-select-single:not(.ant-select-customize-input)
+  .ant-select-selector
+  .ant-select-selection-search-input {
+  // height: 40px;
+}
+.ant-select-selection-search-input {
+  // height: 40px;
+  &::placeholder {
+    color: #909090;
+    @include mainFont(20);
+  }
+}
+.ant-select-dropdown {
+  border: solid 2px $bg-primaryLight-deep;
+  box-shadow: none;
+  .rc-virtual-list-scrollbar-thumb {
+    // 下拉選單scrollbar
+    background: $primary-color-d !important;
+  }
+  .ant-select-item {
+    color: $primary-color-d;
+    @include mainFont-B(15);
+  }
+}
+.ant-select-focused {
+  &:hover {
+    box-shadow: 0px 0px 5px 0px $primary-color;
+    border-radius: border('small');
+    border: none;
+  }
+}
+// ---------- Select 結束 ----------
+// ---------- Page頁數 開始 ----------
+.ant-pagination.ant-pagination-simple {
+  .ant-pagination-simple-pager {
+    @include mainFont-B(18);
+    color: $f-secondary-primary;
+    width: calc(63px * 2 + 25px);
+    height: 25px;
+    position: relative;
+    z-index: 1;
+    &::after {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 63px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      border: 3px solid $f-primary-secondary;
+      border-radius: border('huge');
+      background-color: $f-primary-secondary;
+      content: '';
+    }
+    input {
+      width: 63px;
+      margin-right: calc(21px + 63px / 2);
+      @include mainFont-B(18);
+      color: $f-black-secondary;
+      border: 3px solid $f-primary-secondary;
+      border-radius: border('large');
+      background: transparent;
+      &:hover {
+        border: 3px solid $f-primary-secondary;
+      }
+    }
+    .ant-pagination-slash {
+      position: absolute;
+      @include subFont-B(35);
+      color: $primary-light;
+      line-height: 12px;
+      margin: 0 0;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      margin-right: calc(63px / 2 + 12px);
+    }
+  }
+}
+.ant-pagination {
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    // 下一頁arrrow
+    button {
+      color: $primary-dark;
+    }
+  }
+  .ant-pagination-disabled {
+    // 不可點選的arrow
+    &:hover {
+      color: $page-disabled-color;
+    }
+    .ant-pagination-item-link {
+      color: $page-disabled-color;
+    }
+  }
+}
+// ---------- Page頁數 結束 ----------
+// ---------- 上傳 開始 ----------
+.ant-upload-wrapper
+  .ant-upload-list.ant-upload-list-picture
+  .ant-upload-list-item,
+.ant-upload-wrapper
+  .ant-upload-list.ant-upload-list-picture-card
+  .ant-upload-list-item {
+  // 上傳後的圖片列表
+  border: none;
+  border-radius: border('small');
+  background: $bg-secondary-deep;
+  color: $f-deep-light;
+  &:hover {
+    background: $f-primary-secondary;
+    color: $f-secondary-dark;
+  }
+}
+.ant-upload-wrapper
+  .ant-upload-list
+  .ant-upload-list-item
+  .ant-upload-list-item-actions
+  .anticon {
+  // 清除按鈕icon
+  color: $f-placeholder;
+}
+// ---------- 上傳 結束 ----------

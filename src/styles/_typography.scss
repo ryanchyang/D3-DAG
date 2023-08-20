@@ -1,0 +1,65 @@
+// 自行尺寸 (美術圖: 實際使用尺寸)
+$sizeList: (
+  12: 0.85rem,
+  15: 0.9rem,
+  18: 0.95rem,
+  20: 0.95rem,
+  25: 1rem,
+  30: 1.3rem,
+  35: 1.4rem,
+  40: 1.5rem,
+  48: 1.7rem,
+  50: 1.8rem,
+  55: 2rem,
+  60: 2.5rem,
+);
+$lineList: (
+  1 : 1,
+  2 : 2,
+  3 : 3,
+  4 : 4
+);
+@function size($type) {
+  @return map-get($sizeList, $type);
+}
+
+@mixin mainFont($value) {
+  font-family: 'NotoSans-Medium', 'NotoSansSC-Medium';
+  font-size: map-get($sizeList, $value);
+  font-weight: 500;
+}
+@mixin mainFont-B($value) {
+  font-family: 'NotoSans-Bold', 'NotoSansSC-Bold';
+  font-size: map-get($sizeList, $value);
+  font-weight: 700;
+}
+@mixin subFont-B($value) {
+  font-family: 'Oduda-Bold', 'NotoSans-Bold', 'NotoSansSC-Bold';
+  font-size: map-get($sizeList, $value);
+}
+
+@each $item, $value in $sizeList {
+  .mainFont-#{$item} {
+    // NotoSans-Regular
+    @include mainFont($item);
+  }
+  .mainFont-B-#{$item} {
+    // NotoSans-Bold
+    @include mainFont-B($item);
+  }
+  .subFont-B-#{$item} {
+    // Oduda-Bold
+    @include subFont-B($item);
+  }
+}
+
+@each $item, $value in $lineList {
+  .ellipsis-#{$item} {
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $value;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
