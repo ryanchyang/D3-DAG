@@ -1,12 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  env: {
-    APP_ENV: process.env.APP_ENV,
-  },
+  env: {},
   images: {
-    domains: ['image.whospay.com'],
+    domains: ["image.whospay.com"],
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
